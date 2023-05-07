@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+:root {
+  --primary: #bc4123;
+  --secondary: #2b3452;
+}
 
 * {
   margin: 0;
@@ -6,10 +11,13 @@
   scroll-behavior: smooth;
   box-sizing: border-box;
   font-family: 'Poppins';
+  transition: all 0.3 ease-in-out;
 }
 
 .root-layout {
   margin: auto;
+  background-color: var(--secondary);
+  height: 100%;
 }
 
 /* nav bar */
@@ -19,29 +27,90 @@ header nav {
   justify-content: flex-end;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 header nav h1 {
   margin-right: auto;
+  color: white;
+  border-bottom: 3px solid var(--primary);
 }
 
 header nav a {
   text-decoration: none;
-  padding: 6px;
+  padding: 6px 10px;
   border-radius: 4px;
+  color: white;
+}
+
+header nav a.active {
+  background-color: var(--primary);
+}
+
+header nav a:hover {
+  color: beige;
 }
 
 /* main */
 main {
   max-width: 1200px;
+  margin: auto;
+  padding: 1rem 0;
 }
 
+.home {
+  padding: 0 1rem;
+  color: white;
+}
+
+.home input {
+  border-radius: 1rem;
+  padding: 4px 10px;
+  min-width: 15rem;
+  margin: 1rem auto 1.5rem;
+  font-size: 1rem;
+}
 /* breweries-list */
+.breweries-list {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.breweries-list .brewery {
+  width: 370px;
+  border-radius: 0.5rem;
+  /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+  rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
+  background: rgba(0,0,0,0.3);
+}
+
+.breweries-list .brewery:hover {
+  background: rgba(0,0,0, 0.5);
+}
+
 .breweries-list a {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   text-decoration: none;
   margin: 1.25rem 0;
+  color: lightgrey;
 }
+
+.breweries-list a h2 {
+  color:royalblue;
+}
+
+.breweries-list p {
+  padding-top: 0.9rem;
+  font-weight: 500;
+}
+
+
+
 
 
 /* .App {

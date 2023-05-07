@@ -1,12 +1,12 @@
 import React from 'react';
 import { createBrowserRouter, Route, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 
-import './App.css';
-
 //pages
 import Home, { breweriesLoader } from './pages/Home';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
+//styles
+import './App.css';
 
 //layouts
 import RootLayout from './layouts/RootLayout';

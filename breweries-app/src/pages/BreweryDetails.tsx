@@ -1,6 +1,10 @@
 import React from 'react'
 import { useLoaderData } from 'react-router'
 import axios from 'axios';
+import {
+    Card,
+    CardContent,
+} from '@mui/material'
 
 import Brewery from '../interfaces/Brewery';
 import { Link } from 'react-router-dom';
@@ -15,11 +19,15 @@ const BreweryDetails = () => {
     return (
         <div className='brewery-details'>
             <p><Link to='/'>Back</Link></p>
-            <h2>Details for {brewery.name}</h2>
-            <p>Name: {brewery.name}</p>
-            <p>Type: {brewery.brewery_type}</p>
-            <p>City: {brewery.city}</p>
-            <p>Website: {brewery.website_url}</p>
+            <Card sx={{ minWidth: 275, maxWidth: "max-content" }} elevation={3}>
+                <CardContent>
+                    <h2>Details for {brewery.name}</h2>
+                    <p>Name: {brewery.name}</p>
+                    <p>Type: {brewery.brewery_type}</p>
+                    <p>City: {brewery.city}</p>
+                    <p>Website: {brewery.website_url}</p>
+                </CardContent>
+            </Card>
      </div>
     )
 }

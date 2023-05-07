@@ -3,38 +3,27 @@ import { Link } from 'react-router-dom';
 import { useLoaderData } from 'react-router';
 import axios from 'axios';
 
-interface Brewery {
-  id: string;
-  name: string;
-  brewery_type: string;
-  address_1?: string | null;
-  address_2?: string | null;
-  address_3?: null;
-  city: string;
-  state_province: string;
-  postal_code: string;
-  country: string;
-  longitude?: string | null;
-  latitude?: string | null;
-  phone?: string | null;
-  website_url?: string | null;
-  state: string;
-  street?: string | null;
-}
+import Brewery from '../interfaces/Brewery';
 
 interface GetBreweriesResponse {
     data: Brewery[]
 }
-
 
 const Home = () => {
     const breweries = useLoaderData() as Brewery[];
   return (
     <div className='breweries-list'>
         <h2>Breweries list</h2>
+        <form>
+            <input
+            type='text'
+            placeholder='search brewery'
+            />
+            <button type='submit'>Search</button>
+        </form>
          <div>
             {breweries.map(brewery => (
-                <Link to='/' key={brewery.id}>
+                <Link to={'brewery/' + brewery.id.toString()} key={brewery.id}>
                     <p>{brewery.name}</p>
                     <p>{brewery.brewery_type}</p>
                     <p>{brewery.city}</p>

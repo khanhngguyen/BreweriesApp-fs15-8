@@ -10,7 +10,8 @@ import NotFound from './pages/NotFound';
 
 //layouts
 import RootLayout from './layouts/RootLayout';
-import Breweries from './pages/Breweries';
+import BreweryDetails, { breweryDetailsLoader } from './pages/BreweryDetails';
+import BreweryError from './pages/BreweryError';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,9 +19,16 @@ const router = createBrowserRouter(
       <Route 
       path='/' 
       element={<Home />} 
-      loader={breweriesLoader}>
+      loader={breweriesLoader}
+      >
       </Route>
-    <Route path='about' element={<About />} />
+      <Route
+      path='brewery/:id'
+      element={<BreweryDetails />}
+      loader={breweryDetailsLoader}
+      errorElement={<BreweryError />}
+      />
+      <Route path='about' element={<About />} />
 
       <Route path='*' element={<NotFound />} />
     </Route>

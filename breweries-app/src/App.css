@@ -1,4 +1,50 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+.root-layout {
+  margin: auto;
+}
+
+/* nav bar */
+header nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: end;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header nav h1 {
+  margin-right: auto;
+}
+
+header nav a {
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+/* main */
+main {
+  max-width: 1200px;
+}
+
+/* breweries-list */
+.breweries-list a {
+  display: block;
+  text-decoration: none;
+  margin: 1.25rem 0;
+}
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +81,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

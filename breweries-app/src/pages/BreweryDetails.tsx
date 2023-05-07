@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLoaderData, useParams } from 'react-router'
+import { useLoaderData } from 'react-router'
 import axios from 'axios';
 
 import Brewery from '../interfaces/Brewery';
@@ -10,7 +10,6 @@ interface GetBreweryDetailsResponse {
 }
 
 const BreweryDetails = () => {
-    // let { id } = useParams();
     const brewery = useLoaderData() as Brewery;
 
     return (

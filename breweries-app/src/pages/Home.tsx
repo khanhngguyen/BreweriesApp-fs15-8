@@ -1,41 +1,50 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { useLoaderData } from 'react-router';
 import axios from 'axios';
 
 import Brewery from '../interfaces/Brewery';
+// import { query } from 'express';
 
 interface GetBreweriesResponse {
     data: Brewery[]
 }
 
 const Home = () => {
+    const [query, setQuery] = useState('');
     const breweries = useLoaderData() as Brewery[];
-  return (
-    <div className='breweries-list'>
-        <h2>Breweries list</h2>
-        <form>
+    const filteredList = breweries.filter(brewery => {
+        return brewery.name.toLowerCase().includes(query.toLowerCase());
+    })
+    return (
+        <div className='breweries-list'>
+            <h2>Breweries list</h2>
             <input
-            type='text'
-            placeholder='search brewery'
+            type='search'
+            placeholder='search Brewery by name'
+            value={query}
+            onChange={e => setQuery(e.target.value)}
             />
-            <button type='submit'>Search</button>
-        </form>
-         <div>
-            {breweries.map(brewery => (
-                <Link to={'brewery/' + brewery.id.toString()} key={brewery.id}>
-                    <p>{brewery.name}</p>
-                    <p>{brewery.brewery_type}</p>
-                    <p>{brewery.city}</p>
-                    <p>{brewery.website_url}</p>
-                </Link>
-            ))}
-            {/* {breweries.map(brewery => (
-                <p key={brewery.id}>{brewery.name}</p>
-            ))} */}
+            <div>
+                {/* {breweries.map(brewery => (
+                    <Link to={'brewery/' + brewery.id.toString()} key={brewery.id}>
+                        <p>{brewery.name}</p>
+                        <p>{brewery.brewery_type}</p>
+                        <p>{brewery.city}</p>
+                        <p>{brewery.website_url}</p>
+                    </Link>
+                ))} */}
+                {filteredList.map(brewery => (
+                    <Link to={'brewery/' + brewery.id.toString()} key={brewery.id}>
+                        <p>{brewery.name}</p>
+                        <p>{brewery.brewery_type}</p>
+                        <p>{brewery.city}</p>
+                        <p>{brewery.website_url}</p>
+                    </Link>
+                ))}
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Home

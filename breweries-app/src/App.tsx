@@ -12,6 +12,7 @@ import NotFound from './pages/NotFound';
 import RootLayout from './layouts/RootLayout';
 import BreweryDetails, { breweryDetailsLoader } from './pages/BreweryDetails';
 import BreweryError from './pages/BreweryError';
+import Contact, { contactSubmit } from './pages/Contact';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,6 +30,7 @@ const router = createBrowserRouter(
       errorElement={<BreweryError />}
       />
       <Route path='about' element={<About />} />
+      <Route path='contact' element={<Contact />} action={contactSubmit}/>
 
       <Route path='*' element={<NotFound />} />
     </Route>

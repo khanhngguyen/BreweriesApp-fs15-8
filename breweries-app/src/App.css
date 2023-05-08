@@ -202,3 +202,9 @@ main {
   font-size: 1.1rem;
   padding: 0 2rem;
 }
+
+/* Not Found Page */ 
+.not-found-page {
+  color: white;
+  padding: 0 1rem;;
+}

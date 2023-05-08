@@ -23,3 +23,7 @@ Fetch, display, and search for brewery companies from the given API endpoint, us
 8. Create a contact form so that user can send question along with their contact information. 
 
 9. Use Google-login option to pre-fill the contact form for user.
+
+## Result
+[live demo available here](https://khanhngguyen.github.io/fs15_8-breweries-app)
+

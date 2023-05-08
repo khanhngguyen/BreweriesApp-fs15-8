@@ -18,6 +18,7 @@
   margin: auto;
   background-color: var(--secondary);
   height: 100%;
+  min-height: 100vh;
 }
 
 a {
@@ -65,7 +66,7 @@ main {
 .home {
   padding: 0 1rem;
   color: white;
-  height: 100vh;
+  height: 100%;
 }
 
 .home input {
@@ -162,4 +163,42 @@ main {
 .contact-page button:hover {
   background-color: var(--primary);
   color: white;
+}
+
+/* Brewery Details page */
+.brewery-details {
+  height: 100vh;
+  padding: 0 1rem;
+}
+
+.brewery-details p {
+  margin-bottom: 2rem;
+}
+
+.brewery-details .details {
+  border-radius: 0.5rem;
+  background: rgba(0,0,0,0.15);
+  color: lightgrey;
+  padding: 1rem 2rem 0
+}
+
+.brewery-details .details:hover {
+  background: rgba(0,0,0, 0.3);
+  color: beige;
+}
+
+.brewery-details h2  {
+  color: royalblue;
+  margin-left: 0;
+  margin-bottom: 1rem;
+}
+
+.details__content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0 2rem;
 }

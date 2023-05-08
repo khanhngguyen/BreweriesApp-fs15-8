@@ -19,12 +19,19 @@ const BreweryDetails = () => {
     return (
         <div className='brewery-details'>
             <p><Link to='/'>Back</Link></p>
-            <Card sx={{ minWidth: 275, maxWidth: "max-content" }} elevation={3}>
-                <CardContent>
+            <Card 
+            sx={{ minWidth: 275, 
+            maxWidth: "max-content" }} 
+            elevation={3}
+            className='details'
+            >
+                <CardContent className='details__content'>
                     <h2>Details for {brewery.name}</h2>
                     <p>Name: {brewery.name}</p>
                     <p>Type: {brewery.brewery_type}</p>
-                    <p>City: {brewery.city}</p>
+                    <p>Country: {brewery.country}</p>
+                    <p>Address: {brewery.address_1}, {brewery.postal_code}, {brewery.city}, {brewery.state}</p>
+                    <p>Phone: +{brewery.phone}</p>
                     <p>Website: {brewery.website_url}</p>
                 </CardContent>
             </Card>

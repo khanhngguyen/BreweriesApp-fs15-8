@@ -19,9 +19,7 @@
 .env.production.local
 
 react-app-env.d.ts
-reportWebVitals.ts
 setupTests.ts
-
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

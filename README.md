@@ -25,13 +25,13 @@ Fetch, display, and search for brewery companies from the given API endpoint, us
 9. Use Google-login option to pre-fill the contact form for user.
 
 ## Result
-[live demo available here](https://khanhngguyen.github.io/fs15_8-breweries-app) (click on Home or Back to Home)
+[live demo available here](https://kim-breweries-app-fs15.netlify.app/)
 
 Home page 
-![homepage](./breweries-app/src/demo-pictures/demo-homepage.png)
+![homepage](./src/demo-pictures/demo-homepage.png)
 
 Search bar 
-![search bar](./breweries-app/src/demo-pictures/demo-search.png)
+![search bar](./src/demo-pictures/demo-search.png)
 
 Contact page with form 
-![contact page with form](./breweries-app/src/demo-pictures/demo-contact.png)
+![contact page with form](./src/demo-pictures/demo-contact.png)
